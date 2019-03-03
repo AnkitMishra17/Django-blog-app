@@ -1,0 +1,13 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+
+  <div class="article-detail container" style="margin-top:5%;">
+    <div class="article">
+      <p class="display-4 d-flex justify-content-center mt-5" style="color: azure">{{ article.title }}</p>
+      <img src="{{ article.thumb.url }}" alt="Article_Image" class="p-5">
+      <p>{{ article.body }}</p>
+      <p>{{ article.date }}</p>
+    </div>
+  </div>
+{% endblock %}

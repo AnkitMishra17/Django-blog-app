@@ -1,0 +1,16 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<div class="container site-form" style="margin-top: 10%;">
+
+  <form action="{% url 'accounts:login' %}" class="form-group" method="post">
+      <p class="display-4  d-flex justify-content-center" style="color: black">Log-In Form</p>
+    {% csrf_token %}
+    {{form}}
+    {% if request.GET.next %}
+    <input type="hidden" class="form-control" name="next" value="{{request.GET.next}}">
+    {% endif %}
+    <button type="submit" class="btn btn-dark w-25 mt-3" name="button">Login</button>
+  </form>
+</div>
+{% endblock %}

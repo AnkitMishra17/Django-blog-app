@@ -1,0 +1,14 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+
+<div style="margin-top: 10%;" class="container">
+  <form action="/accounts/signup/" class="site-form" method="post">
+    <p class="display-4 d-flex justify-content-center text-sm-left" style="color: black">Sign Up Form</p>
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" value="Sign-up">
+  </form>
+
+</div>
+{% endblock %}
